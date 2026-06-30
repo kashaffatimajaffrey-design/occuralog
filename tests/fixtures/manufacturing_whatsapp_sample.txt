@@ -1,0 +1,404 @@
+# occuralog — Synthetic WhatsApp Dataset v0.1
+# Generated for testing and development purposes
+# Labeled as SYNTHETIC — does not represent real individuals or companies
+# Format: WhatsApp group export style
+# Group: "Steel Ops - Production 🏭"
+# Date range: January 2024 — June 2026
+# Language: Mixed Urdu/Roman Urdu/English (as spoken in Pakistani factory ops groups)
+# 150 messages
+# ---
+
+[1/8/2024, 9:02 AM] Tariq Usman: order 3201 ka material kab aayega? vendor ne kal bola tha aaj deliver hoga
+
+[1/8/2024, 9:15 AM] Farhan Malik: bhai abhi truck Lahore mein hai. shayad shaam tak
+
+[1/8/2024, 9:17 AM] Tariq Usman: shaam tak matlab 5 baje ya 8 baje? client wait kar raha hai
+
+[1/8/2024, 9:20 AM] Farhan Malik: 6 baje tak confirm tha unhone. main dobara call karta hun
+
+[1/8/2024, 10:45 AM] Ahmed Raza: production floor pe angle iron khatam ho gaya. order 3201 ruk jayega agar material nahi aaya
+
+[1/8/2024, 11:03 AM] Farhan Malik: truck nikal gaya Lahore se. 4 ghante mein yahan hoga inshallah
+
+[1/8/2024, 3:22 PM] Tariq Usman: truck pohoncha? koi update?
+
+[1/8/2024, 3:45 PM] Ahmed Raza: aa gaya bhai. unloading ho rahi hai
+
+[1/8/2024, 3:47 PM] Tariq Usman: 👍
+
+[2/14/2024, 8:30 AM] Zubair Khan: order 3310 — cutting complete. welding start ho gayi hai
+
+[2/14/2024, 8:55 AM] Salman Butt: QC check kab hoga? inspector aaj available hai kal nahi
+
+[2/14/2024, 9:10 AM] Zubair Khan: aaj 2 baje ke baad kar lo
+
+[2/14/2024, 2:05 PM] Salman Butt: QC done. minor rework required. 3 joints pe
+
+[2/14/2024, 2:08 PM] Ahmed Raza: kitna time lagega rework mein?
+
+[2/14/2024, 2:15 PM] Salman Butt: 2-3 ghante. aaj raat tak complete ho jayega
+
+[2/15/2024, 9:00 AM] Zubair Khan: order 3310 rework complete. dispatch ready hai
+
+[3/3/2024, 10:11 AM] Tariq Usman: vendor Hamza Steel ne price revise kiya hai. 15% increase. koi alternative hai?
+
+[3/3/2024, 10:30 AM] Farhan Malik: Al-Kareem Steel se rate mangwata hun
+
+[3/3/2024, 11:45 AM] Farhan Malik: Al-Kareem wale 8% increase kar rahe hain. Hamza se better hai
+
+[3/3/2024, 12:00 PM] Tariq Usman: theek hai. Al-Kareem ko order dete hain order 3340 ke liye
+
+[3/15/2024, 8:05 AM] Ahmed Raza: bhai order 3340 ka pipe material wrong gauge aaya hai. 3mm ki jagah 2.5mm
+
+[3/15/2024, 8:12 AM] Tariq Usman: Al-Kareem ko call karo abhi. replacement chahiye
+
+[3/15/2024, 8:20 AM] Farhan Malik: baat ki. kal replacement bhejenge
+
+[3/15/2024, 8:22 AM] Ahmed Raza: kal? production ruk jayegi aaj
+
+[3/15/2024, 9:00 AM] Farhan Malik: unhone aaj shaam 5 baje tak dene ka kaha hai. extra charge nahi lagega
+
+[3/15/2024, 5:30 PM] Ahmed Raza: material aa gaya. correct gauge. production resume
+
+[4/2/2024, 9:45 AM] Salman Butt: order 3401 delivery date kya hai? client ka call aaya tha
+
+[4/2/2024, 10:00 AM] Tariq Usman: 10 April confirm thi
+
+[4/2/2024, 10:05 AM] Zubair Khan: bhai 10 April mushkil hai. fabrication mein 3 din delay hai. welder beemar tha
+
+[4/2/2024, 10:15 AM] Tariq Usman: kitna realistic date hai?
+
+[4/2/2024, 10:18 AM] Zubair Khan: 14 April comfortable hoga
+
+[4/2/2024, 10:30 AM] Tariq Usman: client ko 13 April bolunga. internal target 12 rakhte hain
+
+[4/10/2024, 2:00 PM] Ahmed Raza: order 3401 fabrication complete. painting start
+
+[4/12/2024, 11:00 AM] Ahmed Raza: painting done. dispatch ready
+
+[4/12/2024, 11:10 AM] Tariq Usman: 👍 client ko kal delivery confirm karo
+
+[5/20/2024, 8:00 AM] Farhan Malik: naya order aaya hai. order 3500. client: Fauji Cement. structural steel 45 ton
+
+[5/20/2024, 8:15 AM] Tariq Usman: drawing share karo
+
+[5/20/2024, 8:20 AM] Farhan Malik: [Document: order_3500_drawings_v1.pdf]
+
+[5/20/2024, 10:30 AM] Zubair Khan: drawings dekh li. complex hai. 6 hafta minimum lagega
+
+[5/20/2024, 10:45 AM] Tariq Usman: material procurement start karo. Hamza Steel ko RFQ bhejo aaj hi
+
+[6/3/2024, 9:00 AM] Ahmed Raza: order 3500 — material aa gaya. cutting start ho gayi
+
+[6/17/2024, 3:30 PM] Zubair Khan: order 3500 fabrication 60% complete
+
+[7/1/2024, 8:30 AM] Tariq Usman: order 3500 kab complete hoga? Fauji wale pressure de rahe hain
+
+[7/1/2024, 8:45 AM] Zubair Khan: 10 July tak complete ho jayega. painting aur dispatch mein 3-4 din aur
+
+[7/1/2024, 9:00 AM] Tariq Usman: 15 July ko dispatch confirm karte hain
+
+[7/14/2024, 5:00 PM] Zubair Khan: order 3500 fabrication complete ✅
+
+[7/16/2024, 10:00 AM] Ahmed Raza: painting complete. QC inspection kal
+
+[7/17/2024, 2:00 PM] Salman Butt: QC passed. dispatch ready
+
+[7/18/2024, 9:00 AM] Farhan Malik: truck book ho gaya. kal subah dispatch
+
+[7/19/2024, 8:30 AM] Farhan Malik: order 3500 dispatch ho gaya. tracking number share karta hun
+
+[8/5/2024, 11:00 AM] Ahmed Raza: production floor pe welding rods khatam hone wali hain. 2 din ka stock bacha hai
+
+[8/5/2024, 11:15 AM] Tariq Usman: Farhan bhai order karo aaj hi. E6013 — 50 boxes
+
+[8/5/2024, 11:30 AM] Farhan Malik: order de diya. parson delivery hogi
+
+[8/7/2024, 9:00 AM] Farhan Malik: welding rods aa gaye
+
+[9/10/2024, 8:00 AM] Zubair Khan: order 3601 — client ne design change bheja hai. 30% kaam badh jayega
+
+[9/10/2024, 8:20 AM] Tariq Usman: change order raise karo. extra cost aur time dono
+
+[9/10/2024, 9:00 AM] Salman Butt: main variation order draft karta hun. review kar lena
+
+[9/10/2024, 11:00 AM] Salman Butt: [Document: variation_order_3601_v1.docx]
+
+[9/10/2024, 4:00 PM] Tariq Usman: reviewed. theek hai. client ko sign karwao
+
+[10/1/2024, 10:00 AM] Farhan Malik: order 3650 — vendor ne material delivery miss ki. koi reason nahi bataya
+
+[10/1/2024, 10:10 AM] Tariq Usman: direct call karo. WhatsApp pe nahi chalta
+
+[10/1/2024, 10:45 AM] Farhan Malik: truck ka tyre puncture hua tha. kal subah delivery confirm ki hai
+
+[10/1/2024, 10:47 AM] Ahmed Raza: kal subah matlab kitne baje?
+
+[10/1/2024, 10:50 AM] Farhan Malik: 9 baje tak
+
+[10/2/2024, 9:30 AM] Ahmed Raza: material aa gaya
+
+[11/15/2024, 8:45 AM] Zubair Khan: bhai kal se gas supply band ho rahi hai SNGPL wali. production pe impact hoga
+
+[11/15/2024, 9:00 AM] Tariq Usman: kitne din ke liye?
+
+[11/15/2024, 9:05 AM] Zubair Khan: 3 din bola hai. maintenance work
+
+[11/15/2024, 9:15 AM] Tariq Usman: jo orders urgent hain unhe aaj kal mein prioritize karo. order 3710 aur 3715
+
+[11/15/2024, 9:20 AM] Ahmed Raza: samajh gaya. aaj raat shift lagani padegi
+
+[11/18/2024, 8:00 AM] Zubair Khan: gas aa gaya. production normal
+
+[12/20/2024, 9:00 AM] Tariq Usman: sab log — 25 December se 1 January factory band rahegi. Eid Milad aur New Year
+
+[12/20/2024, 9:05 AM] Ahmed Raza: orders ka kya? koi pending hai?
+
+[12/20/2024, 9:10 AM] Tariq Usman: order 3801 urgent hai. 24 tak complete karo
+
+[12/23/2024, 4:00 PM] Zubair Khan: order 3801 complete. dispatch ready ✅
+
+[12/24/2024, 8:00 AM] Farhan Malik: dispatch ho gaya. sab ko Eid Milad mubarak 🌙
+
+[1/6/2025, 8:30 AM] Tariq Usman: sab wapas? factory resume kar rahe hain
+
+[1/6/2025, 8:35 AM] Ahmed Raza: haan bhai. production floor ready hai
+
+[1/6/2025, 8:40 AM] Zubair Khan: ek welder nahi aaya. phone nahi utha raha
+
+[1/6/2025, 10:00 AM] Zubair Khan: Rashid aa gaya. family issue tha
+
+[1/20/2025, 11:00 AM] Salman Butt: order 3850 — client ne inspection ke liye apna engineer bheja hai. aaj 3 baje
+
+[1/20/2025, 11:15 AM] Ahmed Raza: floor ready kar raha hun
+
+[1/20/2025, 3:30 PM] Salman Butt: inspection complete. client engineer satisfied. 2 minor points note kiye hain. next week follow up hoga
+
+[2/3/2025, 9:00 AM] Farhan Malik: naya supplier contact kiya hai — Sindh Steel Traders. rates acche hain aur Karachi mein hai
+
+[2/3/2025, 9:15 AM] Tariq Usman: sample order karo pehle. order 3901 ke liye try karte hain
+
+[2/3/2025, 9:20 AM] Farhan Malik: theek hai
+
+[2/10/2025, 8:00 AM] Ahmed Raza: Sindh Steel ka material aa gaya. quality check kar raha hun
+
+[2/10/2025, 10:00 AM] Ahmed Raza: quality theek hai. certificates bhi sahi hain
+
+[2/10/2025, 10:10 AM] Tariq Usman: accha hai. agle orders mein alternative vendor ke taur pe rakhte hain
+
+[3/5/2025, 8:30 AM] Zubair Khan: order 3950 — drawing mein ek discrepancy hai. column height 2 jagah alag likha hua hai. 6.2m aur 6.5m
+
+[3/5/2025, 8:45 AM] Tariq Usman: client ko aaj hi clarify karo. production band karo is part ki jab tak confirm nahi hota
+
+[3/5/2025, 9:30 AM] Salman Butt: client se baat ki. 6.2m correct hai. drawing update aayegi kal
+
+[3/5/2025, 9:32 AM] Zubair Khan: 👍 production resume
+
+[3/25/2025, 2:00 PM] Farhan Malik: order 4001 ka advance payment nahi aaya abhi tak. production rok ke rakhna chahiye?
+
+[3/25/2025, 2:15 PM] Tariq Usman: accounts se poocho status
+
+[3/25/2025, 3:00 PM] Salman Butt: accounts bolta hai kal tak aayega. client ne transfer kiya hai
+
+[3/26/2025, 9:00 AM] Salman Butt: payment aa gayi ✅ production green signal
+
+[4/14/2025, 8:00 AM] Ahmed Raza: aaj bijli nahi hai. KESC load shedding 6 ghante ki
+
+[4/14/2025, 8:10 AM] Tariq Usman: generator pe kaam karo. fuel hai?
+
+[4/14/2025, 8:15 AM] Ahmed Raza: kal hi fill karwaya tha. 8 ghante chalega
+
+[4/14/2025, 8:20 AM] Tariq Usman: theek hai. critical operations jari rakho
+
+[4/14/2025, 2:30 PM] Ahmed Raza: bijli aa gayi
+
+[5/1/2025, 9:00 AM] Tariq Usman: Labour Day — factory band hai. kal wapas
+
+[5/2/2025, 8:00 AM] Zubair Khan: order 4101 urgent. client ne delivery date 2 hafte pehle pull in ki hai
+
+[5/2/2025, 8:15 AM] Tariq Usman: kyun? koi reason?
+
+[5/2/2025, 8:20 AM] Zubair Khan: unka site ready ho gaya pehle. erection start karna chahte hain
+
+[5/2/2025, 8:30 AM] Ahmed Raza: possible nahi hai 2 hafte pehle. material abhi procurement mein hai
+
+[5/2/2025, 8:45 AM] Tariq Usman: client ko batao. 1 hafta pehle try kar sakte hain maximum. 2 hafta nahi hoga
+
+[5/2/2025, 9:30 AM] Salman Butt: client maan gaya. 1 hafta pehle confirm kar liya
+
+[5/20/2025, 10:00 AM] Farhan Malik: order 4200 — Hamza Steel ne bola raw material ki shortage hai market mein. MS plate nahi mil rahi
+
+[5/20/2025, 10:15 AM] Tariq Usman: doosre vendors try karo. Sindh Steel, Al-Kareem dono ko call karo
+
+[5/20/2025, 11:00 AM] Farhan Malik: Al-Kareem ke paas hai. thodi mehngi hai — 12% premium
+
+[5/20/2025, 11:10 AM] Tariq Usman: koi choice nahi. order dedo. client ko delay nahi kar sakte
+
+[6/10/2025, 8:00 AM] Ahmed Raza: order 4300 — crane driver nahi aaya. heavy lifting ruki hui hai
+
+[6/10/2025, 8:10 AM] Zubair Khan: reserve driver ka number hai?
+
+[6/10/2025, 8:15 AM] Ahmed Raza: usse call kiya. 1 ghante mein aa jayega
+
+[6/10/2025, 9:15 AM] Ahmed Raza: crane driver aa gaya. operations resume
+
+[7/7/2025, 9:00 AM] Tariq Usman: order 4400 dispatch plan kya hai? client 10 July maang raha hai
+
+[7/7/2025, 9:10 AM] Zubair Khan: fabrication complete hai. painting 2 din mein hogi. dispatch 9 July tak ho sakta hai
+
+[7/7/2025, 9:15 AM] Tariq Usman: perfect. 9 ko confirm karo
+
+[7/9/2025, 8:00 AM] Farhan Malik: truck book ho gaya. loading shuru
+
+[7/9/2025, 11:00 AM] Farhan Malik: order 4400 dispatch ✅ client ko intimation de dena
+
+[8/12/2025, 2:00 PM] Salman Butt: order 4500 — client ne 3 mahine baad extra item add karne ki request ki hai. scope creep hai
+
+[8/12/2025, 2:15 PM] Tariq Usman: written mein lena. variation order raise karo formal. verbally nahi
+
+[8/12/2025, 2:20 PM] Salman Butt: haan bilkul. draft karta hun
+
+[9/1/2025, 8:00 AM] Ahmed Raza: naya welder join kar raha hai aaj. Imtiaz bhai. 15 saal ka experience hai
+
+[9/1/2025, 8:10 AM] Zubair Khan: accha hua. Rashid ki retirement ke baad 2 mahine se pressure tha
+
+[9/15/2025, 10:00 AM] Farhan Malik: order 4600 — vendor ne bataya port pe container hold ho gaya hai customs mein. imported plates hain
+
+[9/15/2025, 10:15 AM] Tariq Usman: clearance agent se baat karo. kitna time lagega?
+
+[9/15/2025, 11:00 AM] Farhan Malik: agent bolta hai 3-5 working days. documents sahi hain lekin routine inspection hai
+
+[9/15/2025, 11:10 AM] Tariq Usman: client ko proactively batao. risk hide mat karo
+
+[9/22/2025, 9:00 AM] Farhan Malik: container clear ho gaya. material kal aayega
+
+[10/5/2025, 8:30 AM] Zubair Khan: order 4700 — structural drawing revision 3 aayi hai. revision 2 se kuch changes hain
+
+[10/5/2025, 8:45 AM] Salman Butt: jo kaam ho chuka hai usmein koi change hai?
+
+[10/5/2025, 8:50 AM] Zubair Khan: nahi. sirf un pieces mein jo abhi start nahi hue
+
+[10/5/2025, 9:00 AM] Tariq Usman: phir theek hai. revision 3 ke mutabiq aage barho
+
+[11/11/2025, 9:00 AM] Ahmed Raza: order 4821 ka truck nahi aaya abhi tak. vendor Hamza Steel ne kal 8 AM delivery confirm ki thi
+
+[11/11/2025, 9:15 AM] Tariq Usman: Farhan bhai call karo Hamza Steel ko abhi
+
+[11/11/2025, 9:30 AM] Farhan Malik: truck driver se baat ki. truck subah breakdown ho gaya GT Road pe
+
+[11/11/2025, 9:32 AM] Tariq Usman: kab tak theek hoga?
+
+[11/11/2025, 9:45 AM] Farhan Malik: unhone 4 ghante bola hai. mechanic aa raha hai
+
+[11/11/2025, 10:00 AM] Ahmed Raza: production mein order 4821 ka kaam ruk jayega. 2 ghante ka buffer hai bas
+
+[11/11/2025, 2:15 PM] Farhan Malik: truck chal pada. 1.5 ghante mein pohonchega
+
+[11/11/2025, 3:45 PM] Ahmed Raza: material aa gaya. production resume kar rahe hain
+
+[12/5/2025, 11:00 AM] Tariq Usman: sab log please note karo — December 20 se January 5 tak winter shutdown. orders accordingly plan karo
+
+[12/5/2025, 11:10 AM] Zubair Khan: order 4900 December 18 tak complete ho jayega. koi issue nahi
+
+[12/5/2025, 11:15 AM] Ahmed Raza: order 4910 mein risk hai. painting mein delay hai
+
+[12/5/2025, 11:20 AM] Tariq Usman: painting priority pe lagao. overtime karo agar zaroorat ho
+
+[12/15/2025, 4:00 PM] Ahmed Raza: order 4910 complete ✅ dispatch ready hai
+
+[12/18/2025, 9:00 AM] Farhan Malik: dono orders dispatch ho gaye. shutdown se pehle sab clear ✅
+
+[12/18/2025, 9:05 AM] Tariq Usman: 👍 sab ko Eid aur New Year mubarak. January 6 ko milte hain
+
+[1/6/2026, 8:00 AM] Tariq Usman: Assalamualaikum. Naya saal mubarak sab ko. chalo shuru karte hain
+
+[1/6/2026, 8:05 AM] Ahmed Raza: walaikumsalam. floor ready hai
+
+[1/6/2026, 8:10 AM] Zubair Khan: walaikumsalam. welding team puri aa gayi hai
+
+[1/15/2026, 9:00 AM] Farhan Malik: order 5001 — client ne advance nahi bheja. production start hogi ya nahi?
+
+[1/15/2026, 9:15 AM] Tariq Usman: accounts se confirm karo. policy hai pehle 30% advance
+
+[1/15/2026, 10:00 AM] Salman Butt: client ne bola wire transfer initiate kar di hai. 2 din mein aayegi
+
+[1/15/2026, 10:10 AM] Tariq Usman: material procurement start karo. advance aayi to production. nahi aayi to rok lena
+
+[1/17/2026, 9:00 AM] Salman Butt: advance aa gayi ✅
+
+[2/10/2026, 8:30 AM] Ahmed Raza: order 5100 — floor pe ek accident ho gaya. chhoti injury hai. Nadeem ka haath cut gaya
+
+[2/10/2026, 8:32 AM] Tariq Usman: Nadeem theek hai?
+
+[2/10/2026, 8:35 AM] Ahmed Raza: haan. first aid ho gayi. clinic bhej rahe hain proper dressing ke liye
+
+[2/10/2026, 8:40 AM] Tariq Usman: incident report likho. safety meeting kal subah 8 baje. sab mandatory
+
+[2/10/2026, 9:30 AM] Ahmed Raza: Nadeem wapas aaya. 3 stitches. kaam nahi kar sakta aaj
+
+[2/11/2026, 8:00 AM] Tariq Usman: safety meeting — gloves mandatory ab. no exception. kisi ne bhi bina gloves kaam kiya to warning
+
+[3/3/2026, 10:00 AM] Zubair Khan: order 5200 — client ka site visit hai kal. factory mein aana chahte hain progress dekhne
+
+[3/3/2026, 10:10 AM] Tariq Usman: floor clean karo. safety helmets aur vests visible jagah rakho. progress documentation ready karo
+
+[3/3/2026, 10:15 AM] Ahmed Raza: theek hai bhai. kal subah tak sab ready hoga
+
+[3/4/2026, 2:00 PM] Salman Butt: client visit accha raha. khush gaye. kuch minor queries thi jo maine address kar di
+
+[4/1/2026, 9:00 AM] Farhan Malik: order 5350 — Hamza Steel ne phir price revise ki hai. 20% upar
+
+[4/1/2026, 9:10 AM] Tariq Usman: yaar ab primary vendor change karna padega. Sindh Steel ke saath long-term rate fix karo
+
+[4/1/2026, 9:20 AM] Farhan Malik: Sindh Steel se baat karta hun quarterly contract ke liye
+
+[4/8/2026, 11:00 AM] Farhan Malik: Sindh Steel se 6-month contract ho gaya. rates fixed hain. Hamza Steel backup only
+
+[4/8/2026, 11:05 AM] Tariq Usman: 👍 accha kiya. predictability chahiye thi
+
+[5/5/2026, 8:00 AM] Ahmed Raza: order 5500 — material inspection mein 4 pieces rejected ho gaye. size tolerance se bahar hain
+
+[5/5/2026, 8:15 AM] Tariq Usman: Sindh Steel ko NCR raise karo. replacement aur credit dono
+
+[5/5/2026, 9:00 AM] Farhan Malik: NCR bhej diya. unhone accept kiya. replacement 2 din mein
+
+[5/7/2026, 8:30 AM] Farhan Malik: replacement material aa gaya. quality theek hai
+
+[5/7/2026, 8:35 AM] Ahmed Raza: production resume ✅
+
+[6/2/2026, 9:00 AM] Zubair Khan: order 5600 — client ne final payment rok li hai. keh rahe hain 2 punch list items close nahi hue
+
+[6/2/2026, 9:15 AM] Tariq Usman: punch list items kya hain?
+
+[6/2/2026, 9:20 AM] Salman Butt: [Document: punchlist_5600_final.pdf]
+
+[6/2/2026, 9:45 AM] Zubair Khan: dekha maine. dono items chote hain. 1 din ka kaam hai
+
+[6/2/2026, 10:00 AM] Tariq Usman: aaj hi khatam karo. kal client ko confirm karo. payment atak rahi hai
+
+[6/3/2026, 10:00 AM] Zubair Khan: punch list complete ✅ photos bhej diye client ko
+
+[6/3/2026, 11:30 AM] Salman Butt: client ne confirm kiya. payment release ho rahi hai
+
+[6/3/2026, 11:32 AM] Tariq Usman: 👍
+
+[6/20/2026, 8:30 AM] Ahmed Raza: order 5700 — naya order confirm hua. 80 ton structural steel. biggest order this year
+
+[6/20/2026, 8:35 AM] Tariq Usman: mashallah. drawings kab milenge?
+
+[6/20/2026, 8:40 AM] Ahmed Raza: is hafte mein client bhejega
+
+[6/20/2026, 8:45 AM] Zubair Khan: capacity check karta hun. 2 orders pehle se chal rahe hain
+
+[6/20/2026, 9:00 AM] Tariq Usman: phir bhi lena hai. overtime karenge agar zaroorat padi. aisa order nahi chodna
+
+# ---
+# SYNTHETIC DATASET METADATA
+# Total messages: 150
+# Date range: January 8, 2024 — June 20, 2026
+# Participants: Tariq Usman (Manager), Farhan Malik (Procurement), Ahmed Raza (Production Floor), Zubair Khan (Fabrication Lead), Salman Butt (QC/Admin)
+# Order numbers: 3201 — 5700 (sequential, gaps intentional)
+# Vendors: Hamza Steel, Al-Kareem Steel, Sindh Steel Traders
+# Labeled events present: delivery_delay, material_shortage, quality_rejection, payment_delay, design_change, scope_creep, safety_incident, production_stoppage, dispatch_confirmation, vendor_change
+# Language: Roman Urdu + English code-switching, as used in Pakistani industrial WhatsApp groups
+# Use: Open-source testing and development only. Not derived from real communications.

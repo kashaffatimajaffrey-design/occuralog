@@ -1,0 +1,2453 @@
+{
+  "metadata": {
+    "source_file": "tests\\fixtures\\manufacturing_whatsapp_sample.txt",
+    "parser_version": "0.1.0",
+    "stats": {
+      "total_messages": 192,
+      "classified": 131,
+      "unknown": 61,
+      "classification_rate": 68.2,
+      "event_type_counts": {
+        "unknown": 61,
+        "production_status": 34,
+        "vendor_event": 27,
+        "dispatch_confirmation": 26,
+        "delivery_delay": 14,
+        "qc_inspection": 14,
+        "design_change": 12,
+        "payment_event": 12,
+        "quality_rejection": 9,
+        "safety_incident": 8,
+        "material_shortage": 7,
+        "document_attachment": 3
+      }
+    }
+  },
+  "events": [
+    {
+      "timestamp": "2024-01-08T09:02:00",
+      "timestamp_raw": "1/8/2024 9:02 AM",
+      "sender": "Tariq Usman",
+      "text": "order 3201 ka material kab aayega? vendor ne kal bola tha aaj deliver hoga",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [
+        "3201"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-01-08T09:15:00",
+      "timestamp_raw": "1/8/2024 9:15 AM",
+      "sender": "Farhan Malik",
+      "text": "bhai abhi truck Lahore mein hai. shayad shaam tak",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-01-08T09:17:00",
+      "timestamp_raw": "1/8/2024 9:17 AM",
+      "sender": "Tariq Usman",
+      "text": "shaam tak matlab 5 baje ya 8 baje? client wait kar raha hai",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-01-08T09:20:00",
+      "timestamp_raw": "1/8/2024 9:20 AM",
+      "sender": "Farhan Malik",
+      "text": "6 baje tak confirm tha unhone. main dobara call karta hun",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-01-08T10:45:00",
+      "timestamp_raw": "1/8/2024 10:45 AM",
+      "sender": "Ahmed Raza",
+      "text": "production floor pe angle iron khatam ho gaya. order 3201 ruk jayega agar material nahi aaya",
+      "event_types": [
+        "delivery_delay",
+        "material_shortage"
+      ],
+      "order_numbers": [
+        "3201"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-01-08T11:03:00",
+      "timestamp_raw": "1/8/2024 11:03 AM",
+      "sender": "Farhan Malik",
+      "text": "truck nikal gaya Lahore se. 4 ghante mein yahan hoga inshallah",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-01-08T15:22:00",
+      "timestamp_raw": "1/8/2024 3:22 PM",
+      "sender": "Tariq Usman",
+      "text": "truck pohoncha? koi update?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-01-08T15:45:00",
+      "timestamp_raw": "1/8/2024 3:45 PM",
+      "sender": "Ahmed Raza",
+      "text": "aa gaya bhai. unloading ho rahi hai",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-01-08T15:47:00",
+      "timestamp_raw": "1/8/2024 3:47 PM",
+      "sender": "Tariq Usman",
+      "text": "👍",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-02-14T08:30:00",
+      "timestamp_raw": "2/14/2024 8:30 AM",
+      "sender": "Zubair Khan",
+      "text": "order 3310 — cutting complete. welding start ho gayi hai",
+      "event_types": [
+        "production_status",
+        "safety_incident"
+      ],
+      "order_numbers": [
+        "3310"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-02-14T08:55:00",
+      "timestamp_raw": "2/14/2024 8:55 AM",
+      "sender": "Salman Butt",
+      "text": "QC check kab hoga? inspector aaj available hai kal nahi",
+      "event_types": [
+        "qc_inspection"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-02-14T09:10:00",
+      "timestamp_raw": "2/14/2024 9:10 AM",
+      "sender": "Zubair Khan",
+      "text": "aaj 2 baje ke baad kar lo",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-02-14T14:05:00",
+      "timestamp_raw": "2/14/2024 2:05 PM",
+      "sender": "Salman Butt",
+      "text": "QC done. minor rework required. 3 joints pe",
+      "event_types": [
+        "quality_rejection",
+        "qc_inspection"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-02-14T14:08:00",
+      "timestamp_raw": "2/14/2024 2:08 PM",
+      "sender": "Ahmed Raza",
+      "text": "kitna time lagega rework mein?",
+      "event_types": [
+        "quality_rejection"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-02-14T14:15:00",
+      "timestamp_raw": "2/14/2024 2:15 PM",
+      "sender": "Salman Butt",
+      "text": "2-3 ghante. aaj raat tak complete ho jayega",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-02-15T09:00:00",
+      "timestamp_raw": "2/15/2024 9:00 AM",
+      "sender": "Zubair Khan",
+      "text": "order 3310 rework complete. dispatch ready hai",
+      "event_types": [
+        "quality_rejection",
+        "dispatch_confirmation",
+        "production_status"
+      ],
+      "order_numbers": [
+        "3310"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-03-03T10:11:00",
+      "timestamp_raw": "3/3/2024 10:11 AM",
+      "sender": "Tariq Usman",
+      "text": "vendor Hamza Steel ne price revise kiya hai. 15% increase. koi alternative hai?",
+      "event_types": [
+        "quality_rejection",
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-03-03T10:30:00",
+      "timestamp_raw": "3/3/2024 10:30 AM",
+      "sender": "Farhan Malik",
+      "text": "Al-Kareem Steel se rate mangwata hun",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-03-03T11:45:00",
+      "timestamp_raw": "3/3/2024 11:45 AM",
+      "sender": "Farhan Malik",
+      "text": "Al-Kareem wale 8% increase kar rahe hain. Hamza se better hai",
+      "event_types": [
+        "quality_rejection",
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-03-03T12:00:00",
+      "timestamp_raw": "3/3/2024 12:00 PM",
+      "sender": "Tariq Usman",
+      "text": "theek hai. Al-Kareem ko order dete hain order 3340 ke liye",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [
+        "3340"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-03-15T08:05:00",
+      "timestamp_raw": "3/15/2024 8:05 AM",
+      "sender": "Ahmed Raza",
+      "text": "bhai order 3340 ka pipe material wrong gauge aaya hai. 3mm ki jagah 2.5mm",
+      "event_types": [
+        "quality_rejection"
+      ],
+      "order_numbers": [
+        "3340"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-03-15T08:12:00",
+      "timestamp_raw": "3/15/2024 8:12 AM",
+      "sender": "Tariq Usman",
+      "text": "Al-Kareem ko call karo abhi. replacement chahiye",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-03-15T08:20:00",
+      "timestamp_raw": "3/15/2024 8:20 AM",
+      "sender": "Farhan Malik",
+      "text": "baat ki. kal replacement bhejenge",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-03-15T08:22:00",
+      "timestamp_raw": "3/15/2024 8:22 AM",
+      "sender": "Ahmed Raza",
+      "text": "kal? production ruk jayegi aaj",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-03-15T09:00:00",
+      "timestamp_raw": "3/15/2024 9:00 AM",
+      "sender": "Farhan Malik",
+      "text": "unhone aaj shaam 5 baje tak dene ka kaha hai. extra charge nahi lagega",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-03-15T17:30:00",
+      "timestamp_raw": "3/15/2024 5:30 PM",
+      "sender": "Ahmed Raza",
+      "text": "material aa gaya. correct gauge. production resume",
+      "event_types": [
+        "dispatch_confirmation",
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-04-02T09:45:00",
+      "timestamp_raw": "4/2/2024 9:45 AM",
+      "sender": "Salman Butt",
+      "text": "order 3401 delivery date kya hai? client ka call aaya tha",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [
+        "3401"
+      ],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-04-02T10:00:00",
+      "timestamp_raw": "4/2/2024 10:00 AM",
+      "sender": "Tariq Usman",
+      "text": "10 April confirm thi",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-04-02T10:05:00",
+      "timestamp_raw": "4/2/2024 10:05 AM",
+      "sender": "Zubair Khan",
+      "text": "bhai 10 April mushkil hai. fabrication mein 3 din delay hai. welder beemar tha",
+      "event_types": [
+        "delivery_delay"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-04-02T10:15:00",
+      "timestamp_raw": "4/2/2024 10:15 AM",
+      "sender": "Tariq Usman",
+      "text": "kitna realistic date hai?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-04-02T10:18:00",
+      "timestamp_raw": "4/2/2024 10:18 AM",
+      "sender": "Zubair Khan",
+      "text": "14 April comfortable hoga",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-04-02T10:30:00",
+      "timestamp_raw": "4/2/2024 10:30 AM",
+      "sender": "Tariq Usman",
+      "text": "client ko 13 April bolunga. internal target 12 rakhte hain",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-04-10T14:00:00",
+      "timestamp_raw": "4/10/2024 2:00 PM",
+      "sender": "Ahmed Raza",
+      "text": "order 3401 fabrication complete. painting start",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [
+        "3401"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-04-12T11:00:00",
+      "timestamp_raw": "4/12/2024 11:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "painting done. dispatch ready",
+      "event_types": [
+        "dispatch_confirmation",
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-04-12T11:10:00",
+      "timestamp_raw": "4/12/2024 11:10 AM",
+      "sender": "Tariq Usman",
+      "text": "👍 client ko kal delivery confirm karo",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-05-20T08:00:00",
+      "timestamp_raw": "5/20/2024 8:00 AM",
+      "sender": "Farhan Malik",
+      "text": "naya order aaya hai. order 3500. client: Fauji Cement. structural steel 45 ton",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [
+        "3500"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-05-20T08:15:00",
+      "timestamp_raw": "5/20/2024 8:15 AM",
+      "sender": "Tariq Usman",
+      "text": "drawing share karo",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-05-20T08:20:00",
+      "timestamp_raw": "5/20/2024 8:20 AM",
+      "sender": "Farhan Malik",
+      "text": "[Document: order_3500_drawings_v1.pdf]",
+      "event_types": [
+        "document_attachment"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-05-20T10:30:00",
+      "timestamp_raw": "5/20/2024 10:30 AM",
+      "sender": "Zubair Khan",
+      "text": "drawings dekh li. complex hai. 6 hafta minimum lagega",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-05-20T10:45:00",
+      "timestamp_raw": "5/20/2024 10:45 AM",
+      "sender": "Tariq Usman",
+      "text": "material procurement start karo. Hamza Steel ko RFQ bhejo aaj hi",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-06-03T09:00:00",
+      "timestamp_raw": "6/3/2024 9:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "order 3500 — material aa gaya. cutting start ho gayi",
+      "event_types": [
+        "dispatch_confirmation",
+        "safety_incident"
+      ],
+      "order_numbers": [
+        "3500"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-06-17T15:30:00",
+      "timestamp_raw": "6/17/2024 3:30 PM",
+      "sender": "Zubair Khan",
+      "text": "order 3500 fabrication 60% complete",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [
+        "3500"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-07-01T08:30:00",
+      "timestamp_raw": "7/1/2024 8:30 AM",
+      "sender": "Tariq Usman",
+      "text": "order 3500 kab complete hoga? Fauji wale pressure de rahe hain",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [
+        "3500"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-07-01T08:45:00",
+      "timestamp_raw": "7/1/2024 8:45 AM",
+      "sender": "Zubair Khan",
+      "text": "10 July tak complete ho jayega. painting aur dispatch mein 3-4 din aur",
+      "event_types": [
+        "dispatch_confirmation",
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-07-01T09:00:00",
+      "timestamp_raw": "7/1/2024 9:00 AM",
+      "sender": "Tariq Usman",
+      "text": "15 July ko dispatch confirm karte hain",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-07-14T17:00:00",
+      "timestamp_raw": "7/14/2024 5:00 PM",
+      "sender": "Zubair Khan",
+      "text": "order 3500 fabrication complete ✅",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [
+        "3500"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-07-16T10:00:00",
+      "timestamp_raw": "7/16/2024 10:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "painting complete. QC inspection kal",
+      "event_types": [
+        "production_status",
+        "qc_inspection"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-07-17T14:00:00",
+      "timestamp_raw": "7/17/2024 2:00 PM",
+      "sender": "Salman Butt",
+      "text": "QC passed. dispatch ready",
+      "event_types": [
+        "dispatch_confirmation",
+        "qc_inspection"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-07-18T09:00:00",
+      "timestamp_raw": "7/18/2024 9:00 AM",
+      "sender": "Farhan Malik",
+      "text": "truck book ho gaya. kal subah dispatch",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-07-19T08:30:00",
+      "timestamp_raw": "7/19/2024 8:30 AM",
+      "sender": "Farhan Malik",
+      "text": "order 3500 dispatch ho gaya. tracking number share karta hun",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [
+        "3500"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-08-05T11:00:00",
+      "timestamp_raw": "8/5/2024 11:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "production floor pe welding rods khatam hone wali hain. 2 din ka stock bacha hai",
+      "event_types": [
+        "material_shortage"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-08-05T11:15:00",
+      "timestamp_raw": "8/5/2024 11:15 AM",
+      "sender": "Tariq Usman",
+      "text": "Farhan bhai order karo aaj hi. E6013 — 50 boxes",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-08-05T11:30:00",
+      "timestamp_raw": "8/5/2024 11:30 AM",
+      "sender": "Farhan Malik",
+      "text": "order de diya. parson delivery hogi",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-08-07T09:00:00",
+      "timestamp_raw": "8/7/2024 9:00 AM",
+      "sender": "Farhan Malik",
+      "text": "welding rods aa gaye",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-09-10T08:00:00",
+      "timestamp_raw": "9/10/2024 8:00 AM",
+      "sender": "Zubair Khan",
+      "text": "order 3601 — client ne design change bheja hai. 30% kaam badh jayega",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [
+        "3601"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-09-10T08:20:00",
+      "timestamp_raw": "9/10/2024 8:20 AM",
+      "sender": "Tariq Usman",
+      "text": "change order raise karo. extra cost aur time dono",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-09-10T09:00:00",
+      "timestamp_raw": "9/10/2024 9:00 AM",
+      "sender": "Salman Butt",
+      "text": "main variation order draft karta hun. review kar lena",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-09-10T11:00:00",
+      "timestamp_raw": "9/10/2024 11:00 AM",
+      "sender": "Salman Butt",
+      "text": "[Document: variation_order_3601_v1.docx]",
+      "event_types": [
+        "document_attachment"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-09-10T16:00:00",
+      "timestamp_raw": "9/10/2024 4:00 PM",
+      "sender": "Tariq Usman",
+      "text": "reviewed. theek hai. client ko sign karwao",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-10-01T10:00:00",
+      "timestamp_raw": "10/1/2024 10:00 AM",
+      "sender": "Farhan Malik",
+      "text": "order 3650 — vendor ne material delivery miss ki. koi reason nahi bataya",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [
+        "3650"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-10-01T10:10:00",
+      "timestamp_raw": "10/1/2024 10:10 AM",
+      "sender": "Tariq Usman",
+      "text": "direct call karo. WhatsApp pe nahi chalta",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-10-01T10:45:00",
+      "timestamp_raw": "10/1/2024 10:45 AM",
+      "sender": "Farhan Malik",
+      "text": "truck ka tyre puncture hua tha. kal subah delivery confirm ki hai",
+      "event_types": [
+        "delivery_delay"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-10-01T10:47:00",
+      "timestamp_raw": "10/1/2024 10:47 AM",
+      "sender": "Ahmed Raza",
+      "text": "kal subah matlab kitne baje?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-10-01T10:50:00",
+      "timestamp_raw": "10/1/2024 10:50 AM",
+      "sender": "Farhan Malik",
+      "text": "9 baje tak",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-10-02T09:30:00",
+      "timestamp_raw": "10/2/2024 9:30 AM",
+      "sender": "Ahmed Raza",
+      "text": "material aa gaya",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-11-15T08:45:00",
+      "timestamp_raw": "11/15/2024 8:45 AM",
+      "sender": "Zubair Khan",
+      "text": "bhai kal se gas supply band ho rahi hai SNGPL wali. production pe impact hoga",
+      "event_types": [
+        "material_shortage"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-11-15T09:00:00",
+      "timestamp_raw": "11/15/2024 9:00 AM",
+      "sender": "Tariq Usman",
+      "text": "kitne din ke liye?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-11-15T09:05:00",
+      "timestamp_raw": "11/15/2024 9:05 AM",
+      "sender": "Zubair Khan",
+      "text": "3 din bola hai. maintenance work",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-11-15T09:15:00",
+      "timestamp_raw": "11/15/2024 9:15 AM",
+      "sender": "Tariq Usman",
+      "text": "jo orders urgent hain unhe aaj kal mein prioritize karo. order 3710 aur 3715",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [
+        "3710"
+      ],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-11-15T09:20:00",
+      "timestamp_raw": "11/15/2024 9:20 AM",
+      "sender": "Ahmed Raza",
+      "text": "samajh gaya. aaj raat shift lagani padegi",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-11-18T08:00:00",
+      "timestamp_raw": "11/18/2024 8:00 AM",
+      "sender": "Zubair Khan",
+      "text": "gas aa gaya. production normal",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-12-20T09:00:00",
+      "timestamp_raw": "12/20/2024 9:00 AM",
+      "sender": "Tariq Usman",
+      "text": "sab log — 25 December se 1 January factory band rahegi. Eid Milad aur New Year",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-12-20T09:05:00",
+      "timestamp_raw": "12/20/2024 9:05 AM",
+      "sender": "Ahmed Raza",
+      "text": "orders ka kya? koi pending hai?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-12-20T09:10:00",
+      "timestamp_raw": "12/20/2024 9:10 AM",
+      "sender": "Tariq Usman",
+      "text": "order 3801 urgent hai. 24 tak complete karo",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [
+        "3801"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-12-23T16:00:00",
+      "timestamp_raw": "12/23/2024 4:00 PM",
+      "sender": "Zubair Khan",
+      "text": "order 3801 complete. dispatch ready ✅",
+      "event_types": [
+        "dispatch_confirmation",
+        "production_status"
+      ],
+      "order_numbers": [
+        "3801"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2024-12-24T08:00:00",
+      "timestamp_raw": "12/24/2024 8:00 AM",
+      "sender": "Farhan Malik",
+      "text": "dispatch ho gaya. sab ko Eid Milad mubarak 🌙",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-01-06T08:30:00",
+      "timestamp_raw": "1/6/2025 8:30 AM",
+      "sender": "Tariq Usman",
+      "text": "sab wapas? factory resume kar rahe hain",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-01-06T08:35:00",
+      "timestamp_raw": "1/6/2025 8:35 AM",
+      "sender": "Ahmed Raza",
+      "text": "haan bhai. production floor ready hai",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-01-06T08:40:00",
+      "timestamp_raw": "1/6/2025 8:40 AM",
+      "sender": "Zubair Khan",
+      "text": "ek welder nahi aaya. phone nahi utha raha",
+      "event_types": [
+        "delivery_delay"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-01-06T10:00:00",
+      "timestamp_raw": "1/6/2025 10:00 AM",
+      "sender": "Zubair Khan",
+      "text": "Rashid aa gaya. family issue tha",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-01-20T11:00:00",
+      "timestamp_raw": "1/20/2025 11:00 AM",
+      "sender": "Salman Butt",
+      "text": "order 3850 — client ne inspection ke liye apna engineer bheja hai. aaj 3 baje",
+      "event_types": [
+        "qc_inspection"
+      ],
+      "order_numbers": [
+        "3850"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-01-20T11:15:00",
+      "timestamp_raw": "1/20/2025 11:15 AM",
+      "sender": "Ahmed Raza",
+      "text": "floor ready kar raha hun",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-01-20T15:30:00",
+      "timestamp_raw": "1/20/2025 3:30 PM",
+      "sender": "Salman Butt",
+      "text": "inspection complete. client engineer satisfied. 2 minor points note kiye hain. next week follow up hoga",
+      "event_types": [
+        "production_status",
+        "qc_inspection"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-02-03T09:00:00",
+      "timestamp_raw": "2/3/2025 9:00 AM",
+      "sender": "Farhan Malik",
+      "text": "naya supplier contact kiya hai — Sindh Steel Traders. rates acche hain aur Karachi mein hai",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-02-03T09:15:00",
+      "timestamp_raw": "2/3/2025 9:15 AM",
+      "sender": "Tariq Usman",
+      "text": "sample order karo pehle. order 3901 ke liye try karte hain",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [
+        "3901"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-02-03T09:20:00",
+      "timestamp_raw": "2/3/2025 9:20 AM",
+      "sender": "Farhan Malik",
+      "text": "theek hai",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-02-10T08:00:00",
+      "timestamp_raw": "2/10/2025 8:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "Sindh Steel ka material aa gaya. quality check kar raha hun",
+      "event_types": [
+        "dispatch_confirmation",
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-02-10T10:00:00",
+      "timestamp_raw": "2/10/2025 10:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "quality theek hai. certificates bhi sahi hain",
+      "event_types": [
+        "qc_inspection"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-02-10T10:10:00",
+      "timestamp_raw": "2/10/2025 10:10 AM",
+      "sender": "Tariq Usman",
+      "text": "accha hai. agle orders mein alternative vendor ke taur pe rakhte hain",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-03-05T08:30:00",
+      "timestamp_raw": "3/5/2025 8:30 AM",
+      "sender": "Zubair Khan",
+      "text": "order 3950 — drawing mein ek discrepancy hai. column height 2 jagah alag likha hua hai. 6.2m aur 6.5m",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [
+        "3950"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-03-05T08:45:00",
+      "timestamp_raw": "3/5/2025 8:45 AM",
+      "sender": "Tariq Usman",
+      "text": "client ko aaj hi clarify karo. production band karo is part ki jab tak confirm nahi hota",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-03-05T09:30:00",
+      "timestamp_raw": "3/5/2025 9:30 AM",
+      "sender": "Salman Butt",
+      "text": "client se baat ki. 6.2m correct hai. drawing update aayegi kal",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-03-05T09:32:00",
+      "timestamp_raw": "3/5/2025 9:32 AM",
+      "sender": "Zubair Khan",
+      "text": "👍 production resume",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-03-25T14:00:00",
+      "timestamp_raw": "3/25/2025 2:00 PM",
+      "sender": "Farhan Malik",
+      "text": "order 4001 ka advance payment nahi aaya abhi tak. production rok ke rakhna chahiye?",
+      "event_types": [
+        "delivery_delay",
+        "payment_event"
+      ],
+      "order_numbers": [
+        "4001"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-03-25T14:15:00",
+      "timestamp_raw": "3/25/2025 2:15 PM",
+      "sender": "Tariq Usman",
+      "text": "accounts se poocho status",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-03-25T15:00:00",
+      "timestamp_raw": "3/25/2025 3:00 PM",
+      "sender": "Salman Butt",
+      "text": "accounts bolta hai kal tak aayega. client ne transfer kiya hai",
+      "event_types": [
+        "payment_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-03-26T09:00:00",
+      "timestamp_raw": "3/26/2025 9:00 AM",
+      "sender": "Salman Butt",
+      "text": "payment aa gayi ✅ production green signal",
+      "event_types": [
+        "payment_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-04-14T08:00:00",
+      "timestamp_raw": "4/14/2025 8:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "aaj bijli nahi hai. KESC load shedding 6 ghante ki",
+      "event_types": [
+        "material_shortage"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-04-14T08:10:00",
+      "timestamp_raw": "4/14/2025 8:10 AM",
+      "sender": "Tariq Usman",
+      "text": "generator pe kaam karo. fuel hai?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-04-14T08:15:00",
+      "timestamp_raw": "4/14/2025 8:15 AM",
+      "sender": "Ahmed Raza",
+      "text": "kal hi fill karwaya tha. 8 ghante chalega",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-04-14T08:20:00",
+      "timestamp_raw": "4/14/2025 8:20 AM",
+      "sender": "Tariq Usman",
+      "text": "theek hai. critical operations jari rakho",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-04-14T14:30:00",
+      "timestamp_raw": "4/14/2025 2:30 PM",
+      "sender": "Ahmed Raza",
+      "text": "bijli aa gayi",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-05-01T09:00:00",
+      "timestamp_raw": "5/1/2025 9:00 AM",
+      "sender": "Tariq Usman",
+      "text": "Labour Day — factory band hai. kal wapas",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-05-02T08:00:00",
+      "timestamp_raw": "5/2/2025 8:00 AM",
+      "sender": "Zubair Khan",
+      "text": "order 4101 urgent. client ne delivery date 2 hafte pehle pull in ki hai",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [
+        "4101"
+      ],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-05-02T08:15:00",
+      "timestamp_raw": "5/2/2025 8:15 AM",
+      "sender": "Tariq Usman",
+      "text": "kyun? koi reason?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-05-02T08:20:00",
+      "timestamp_raw": "5/2/2025 8:20 AM",
+      "sender": "Zubair Khan",
+      "text": "unka site ready ho gaya pehle. erection start karna chahte hain",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-05-02T08:30:00",
+      "timestamp_raw": "5/2/2025 8:30 AM",
+      "sender": "Ahmed Raza",
+      "text": "possible nahi hai 2 hafte pehle. material abhi procurement mein hai",
+      "event_types": [
+        "material_shortage"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-05-02T08:45:00",
+      "timestamp_raw": "5/2/2025 8:45 AM",
+      "sender": "Tariq Usman",
+      "text": "client ko batao. 1 hafta pehle try kar sakte hain maximum. 2 hafta nahi hoga",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-05-02T09:30:00",
+      "timestamp_raw": "5/2/2025 9:30 AM",
+      "sender": "Salman Butt",
+      "text": "client maan gaya. 1 hafta pehle confirm kar liya",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-05-20T10:00:00",
+      "timestamp_raw": "5/20/2025 10:00 AM",
+      "sender": "Farhan Malik",
+      "text": "order 4200 — Hamza Steel ne bola raw material ki shortage hai market mein. MS plate nahi mil rahi",
+      "event_types": [
+        "delivery_delay",
+        "material_shortage",
+        "vendor_event"
+      ],
+      "order_numbers": [
+        "4200"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-05-20T10:15:00",
+      "timestamp_raw": "5/20/2025 10:15 AM",
+      "sender": "Tariq Usman",
+      "text": "doosre vendors try karo. Sindh Steel, Al-Kareem dono ko call karo",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-05-20T11:00:00",
+      "timestamp_raw": "5/20/2025 11:00 AM",
+      "sender": "Farhan Malik",
+      "text": "Al-Kareem ke paas hai. thodi mehngi hai — 12% premium",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-05-20T11:10:00",
+      "timestamp_raw": "5/20/2025 11:10 AM",
+      "sender": "Tariq Usman",
+      "text": "koi choice nahi. order dedo. client ko delay nahi kar sakte",
+      "event_types": [
+        "delivery_delay"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-06-10T08:00:00",
+      "timestamp_raw": "6/10/2025 8:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "order 4300 — crane driver nahi aaya. heavy lifting ruki hui hai",
+      "event_types": [
+        "delivery_delay"
+      ],
+      "order_numbers": [
+        "4300"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-06-10T08:10:00",
+      "timestamp_raw": "6/10/2025 8:10 AM",
+      "sender": "Zubair Khan",
+      "text": "reserve driver ka number hai?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-06-10T08:15:00",
+      "timestamp_raw": "6/10/2025 8:15 AM",
+      "sender": "Ahmed Raza",
+      "text": "usse call kiya. 1 ghante mein aa jayega",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-06-10T09:15:00",
+      "timestamp_raw": "6/10/2025 9:15 AM",
+      "sender": "Ahmed Raza",
+      "text": "crane driver aa gaya. operations resume",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-07-07T09:00:00",
+      "timestamp_raw": "7/7/2025 9:00 AM",
+      "sender": "Tariq Usman",
+      "text": "order 4400 dispatch plan kya hai? client 10 July maang raha hai",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [
+        "4400"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-07-07T09:10:00",
+      "timestamp_raw": "7/7/2025 9:10 AM",
+      "sender": "Zubair Khan",
+      "text": "fabrication complete hai. painting 2 din mein hogi. dispatch 9 July tak ho sakta hai",
+      "event_types": [
+        "dispatch_confirmation",
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-07-07T09:15:00",
+      "timestamp_raw": "7/7/2025 9:15 AM",
+      "sender": "Tariq Usman",
+      "text": "perfect. 9 ko confirm karo",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-07-09T08:00:00",
+      "timestamp_raw": "7/9/2025 8:00 AM",
+      "sender": "Farhan Malik",
+      "text": "truck book ho gaya. loading shuru",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-07-09T11:00:00",
+      "timestamp_raw": "7/9/2025 11:00 AM",
+      "sender": "Farhan Malik",
+      "text": "order 4400 dispatch ✅ client ko intimation de dena",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [
+        "4400"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-08-12T14:00:00",
+      "timestamp_raw": "8/12/2025 2:00 PM",
+      "sender": "Salman Butt",
+      "text": "order 4500 — client ne 3 mahine baad extra item add karne ki request ki hai. scope creep hai",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [
+        "4500"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-08-12T14:15:00",
+      "timestamp_raw": "8/12/2025 2:15 PM",
+      "sender": "Tariq Usman",
+      "text": "written mein lena. variation order raise karo formal. verbally nahi",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-08-12T14:20:00",
+      "timestamp_raw": "8/12/2025 2:20 PM",
+      "sender": "Salman Butt",
+      "text": "haan bilkul. draft karta hun",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-09-01T08:00:00",
+      "timestamp_raw": "9/1/2025 8:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "naya welder join kar raha hai aaj. Imtiaz bhai. 15 saal ka experience hai",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-09-01T08:10:00",
+      "timestamp_raw": "9/1/2025 8:10 AM",
+      "sender": "Zubair Khan",
+      "text": "accha hua. Rashid ki retirement ke baad 2 mahine se pressure tha",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-09-15T10:00:00",
+      "timestamp_raw": "9/15/2025 10:00 AM",
+      "sender": "Farhan Malik",
+      "text": "order 4600 — vendor ne bataya port pe container hold ho gaya hai customs mein. imported plates hain",
+      "event_types": [
+        "delivery_delay",
+        "vendor_event"
+      ],
+      "order_numbers": [
+        "4600"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-09-15T10:15:00",
+      "timestamp_raw": "9/15/2025 10:15 AM",
+      "sender": "Tariq Usman",
+      "text": "clearance agent se baat karo. kitna time lagega?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-09-15T11:00:00",
+      "timestamp_raw": "9/15/2025 11:00 AM",
+      "sender": "Farhan Malik",
+      "text": "agent bolta hai 3-5 working days. documents sahi hain lekin routine inspection hai",
+      "event_types": [
+        "qc_inspection"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-09-15T11:10:00",
+      "timestamp_raw": "9/15/2025 11:10 AM",
+      "sender": "Tariq Usman",
+      "text": "client ko proactively batao. risk hide mat karo",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-09-22T09:00:00",
+      "timestamp_raw": "9/22/2025 9:00 AM",
+      "sender": "Farhan Malik",
+      "text": "container clear ho gaya. material kal aayega",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-10-05T08:30:00",
+      "timestamp_raw": "10/5/2025 8:30 AM",
+      "sender": "Zubair Khan",
+      "text": "order 4700 — structural drawing revision 3 aayi hai. revision 2 se kuch changes hain",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [
+        "4700"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-10-05T08:45:00",
+      "timestamp_raw": "10/5/2025 8:45 AM",
+      "sender": "Salman Butt",
+      "text": "jo kaam ho chuka hai usmein koi change hai?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-10-05T08:50:00",
+      "timestamp_raw": "10/5/2025 8:50 AM",
+      "sender": "Zubair Khan",
+      "text": "nahi. sirf un pieces mein jo abhi start nahi hue",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-10-05T09:00:00",
+      "timestamp_raw": "10/5/2025 9:00 AM",
+      "sender": "Tariq Usman",
+      "text": "phir theek hai. revision 3 ke mutabiq aage barho",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-11-11T09:00:00",
+      "timestamp_raw": "11/11/2025 9:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "order 4821 ka truck nahi aaya abhi tak. vendor Hamza Steel ne kal 8 AM delivery confirm ki thi",
+      "event_types": [
+        "delivery_delay",
+        "vendor_event"
+      ],
+      "order_numbers": [
+        "4821"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-11-11T09:15:00",
+      "timestamp_raw": "11/11/2025 9:15 AM",
+      "sender": "Tariq Usman",
+      "text": "Farhan bhai call karo Hamza Steel ko abhi",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-11-11T09:30:00",
+      "timestamp_raw": "11/11/2025 9:30 AM",
+      "sender": "Farhan Malik",
+      "text": "truck driver se baat ki. truck subah breakdown ho gaya GT Road pe",
+      "event_types": [
+        "delivery_delay"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-11-11T09:32:00",
+      "timestamp_raw": "11/11/2025 9:32 AM",
+      "sender": "Tariq Usman",
+      "text": "kab tak theek hoga?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-11-11T09:45:00",
+      "timestamp_raw": "11/11/2025 9:45 AM",
+      "sender": "Farhan Malik",
+      "text": "unhone 4 ghante bola hai. mechanic aa raha hai",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-11-11T10:00:00",
+      "timestamp_raw": "11/11/2025 10:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "production mein order 4821 ka kaam ruk jayega. 2 ghante ka buffer hai bas",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [
+        "4821"
+      ],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-11-11T14:15:00",
+      "timestamp_raw": "11/11/2025 2:15 PM",
+      "sender": "Farhan Malik",
+      "text": "truck chal pada. 1.5 ghante mein pohonchega",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-11-11T15:45:00",
+      "timestamp_raw": "11/11/2025 3:45 PM",
+      "sender": "Ahmed Raza",
+      "text": "material aa gaya. production resume kar rahe hain",
+      "event_types": [
+        "dispatch_confirmation",
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-12-05T11:00:00",
+      "timestamp_raw": "12/5/2025 11:00 AM",
+      "sender": "Tariq Usman",
+      "text": "sab log please note karo — December 20 se January 5 tak winter shutdown. orders accordingly plan karo",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-12-05T11:10:00",
+      "timestamp_raw": "12/5/2025 11:10 AM",
+      "sender": "Zubair Khan",
+      "text": "order 4900 December 18 tak complete ho jayega. koi issue nahi",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [
+        "4900"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-12-05T11:15:00",
+      "timestamp_raw": "12/5/2025 11:15 AM",
+      "sender": "Ahmed Raza",
+      "text": "order 4910 mein risk hai. painting mein delay hai",
+      "event_types": [
+        "delivery_delay",
+        "production_status"
+      ],
+      "order_numbers": [
+        "4910"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-12-05T11:20:00",
+      "timestamp_raw": "12/5/2025 11:20 AM",
+      "sender": "Tariq Usman",
+      "text": "painting priority pe lagao. overtime karo agar zaroorat ho",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-12-15T16:00:00",
+      "timestamp_raw": "12/15/2025 4:00 PM",
+      "sender": "Ahmed Raza",
+      "text": "order 4910 complete ✅ dispatch ready hai",
+      "event_types": [
+        "dispatch_confirmation",
+        "production_status"
+      ],
+      "order_numbers": [
+        "4910"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-12-18T09:00:00",
+      "timestamp_raw": "12/18/2025 9:00 AM",
+      "sender": "Farhan Malik",
+      "text": "dono orders dispatch ho gaye. shutdown se pehle sab clear ✅",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2025-12-18T09:05:00",
+      "timestamp_raw": "12/18/2025 9:05 AM",
+      "sender": "Tariq Usman",
+      "text": "👍 sab ko Eid aur New Year mubarak. January 6 ko milte hain",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-01-06T08:00:00",
+      "timestamp_raw": "1/6/2026 8:00 AM",
+      "sender": "Tariq Usman",
+      "text": "Assalamualaikum. Naya saal mubarak sab ko. chalo shuru karte hain",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-01-06T08:05:00",
+      "timestamp_raw": "1/6/2026 8:05 AM",
+      "sender": "Ahmed Raza",
+      "text": "walaikumsalam. floor ready hai",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-01-06T08:10:00",
+      "timestamp_raw": "1/6/2026 8:10 AM",
+      "sender": "Zubair Khan",
+      "text": "walaikumsalam. welding team puri aa gayi hai",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-01-15T09:00:00",
+      "timestamp_raw": "1/15/2026 9:00 AM",
+      "sender": "Farhan Malik",
+      "text": "order 5001 — client ne advance nahi bheja. production start hogi ya nahi?",
+      "event_types": [
+        "production_status",
+        "payment_event"
+      ],
+      "order_numbers": [
+        "5001"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-01-15T09:15:00",
+      "timestamp_raw": "1/15/2026 9:15 AM",
+      "sender": "Tariq Usman",
+      "text": "accounts se confirm karo. policy hai pehle 30% advance",
+      "event_types": [
+        "payment_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-01-15T10:00:00",
+      "timestamp_raw": "1/15/2026 10:00 AM",
+      "sender": "Salman Butt",
+      "text": "client ne bola wire transfer initiate kar di hai. 2 din mein aayegi",
+      "event_types": [
+        "payment_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-01-15T10:10:00",
+      "timestamp_raw": "1/15/2026 10:10 AM",
+      "sender": "Tariq Usman",
+      "text": "material procurement start karo. advance aayi to production. nahi aayi to rok lena",
+      "event_types": [
+        "delivery_delay",
+        "payment_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-01-17T09:00:00",
+      "timestamp_raw": "1/17/2026 9:00 AM",
+      "sender": "Salman Butt",
+      "text": "advance aa gayi ✅",
+      "event_types": [
+        "payment_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-02-10T08:30:00",
+      "timestamp_raw": "2/10/2026 8:30 AM",
+      "sender": "Ahmed Raza",
+      "text": "order 5100 — floor pe ek accident ho gaya. chhoti injury hai. Nadeem ka haath cut gaya",
+      "event_types": [
+        "delivery_delay",
+        "safety_incident"
+      ],
+      "order_numbers": [
+        "5100"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-02-10T08:32:00",
+      "timestamp_raw": "2/10/2026 8:32 AM",
+      "sender": "Tariq Usman",
+      "text": "Nadeem theek hai?",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-02-10T08:35:00",
+      "timestamp_raw": "2/10/2026 8:35 AM",
+      "sender": "Ahmed Raza",
+      "text": "haan. first aid ho gayi. clinic bhej rahe hain proper dressing ke liye",
+      "event_types": [
+        "safety_incident"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-02-10T08:40:00",
+      "timestamp_raw": "2/10/2026 8:40 AM",
+      "sender": "Tariq Usman",
+      "text": "incident report likho. safety meeting kal subah 8 baje. sab mandatory",
+      "event_types": [
+        "safety_incident"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-02-10T09:30:00",
+      "timestamp_raw": "2/10/2026 9:30 AM",
+      "sender": "Ahmed Raza",
+      "text": "Nadeem wapas aaya. 3 stitches. kaam nahi kar sakta aaj",
+      "event_types": [
+        "safety_incident"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-02-11T08:00:00",
+      "timestamp_raw": "2/11/2026 8:00 AM",
+      "sender": "Tariq Usman",
+      "text": "safety meeting — gloves mandatory ab. no exception. kisi ne bhi bina gloves kaam kiya to warning",
+      "event_types": [
+        "safety_incident"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-03-03T10:00:00",
+      "timestamp_raw": "3/3/2026 10:00 AM",
+      "sender": "Zubair Khan",
+      "text": "order 5200 — client ka site visit hai kal. factory mein aana chahte hain progress dekhne",
+      "event_types": [
+        "qc_inspection"
+      ],
+      "order_numbers": [
+        "5200"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-03-03T10:10:00",
+      "timestamp_raw": "3/3/2026 10:10 AM",
+      "sender": "Tariq Usman",
+      "text": "floor clean karo. safety helmets aur vests visible jagah rakho. progress documentation ready karo",
+      "event_types": [
+        "safety_incident"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-03-03T10:15:00",
+      "timestamp_raw": "3/3/2026 10:15 AM",
+      "sender": "Ahmed Raza",
+      "text": "theek hai bhai. kal subah tak sab ready hoga",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-03-04T14:00:00",
+      "timestamp_raw": "3/4/2026 2:00 PM",
+      "sender": "Salman Butt",
+      "text": "client visit accha raha. khush gaye. kuch minor queries thi jo maine address kar di",
+      "event_types": [
+        "qc_inspection"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-04-01T09:00:00",
+      "timestamp_raw": "4/1/2026 9:00 AM",
+      "sender": "Farhan Malik",
+      "text": "order 5350 — Hamza Steel ne phir price revise ki hai. 20% upar",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [
+        "5350"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-04-01T09:10:00",
+      "timestamp_raw": "4/1/2026 9:10 AM",
+      "sender": "Tariq Usman",
+      "text": "yaar ab primary vendor change karna padega. Sindh Steel ke saath long-term rate fix karo",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-04-01T09:20:00",
+      "timestamp_raw": "4/1/2026 9:20 AM",
+      "sender": "Farhan Malik",
+      "text": "Sindh Steel se baat karta hun quarterly contract ke liye",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-04-08T11:00:00",
+      "timestamp_raw": "4/8/2026 11:00 AM",
+      "sender": "Farhan Malik",
+      "text": "Sindh Steel se 6-month contract ho gaya. rates fixed hain. Hamza Steel backup only",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-04-08T11:05:00",
+      "timestamp_raw": "4/8/2026 11:05 AM",
+      "sender": "Tariq Usman",
+      "text": "👍 accha kiya. predictability chahiye thi",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-05-05T08:00:00",
+      "timestamp_raw": "5/5/2026 8:00 AM",
+      "sender": "Ahmed Raza",
+      "text": "order 5500 — material inspection mein 4 pieces rejected ho gaye. size tolerance se bahar hain",
+      "event_types": [
+        "quality_rejection",
+        "qc_inspection"
+      ],
+      "order_numbers": [
+        "5500"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-05-05T08:15:00",
+      "timestamp_raw": "5/5/2026 8:15 AM",
+      "sender": "Tariq Usman",
+      "text": "Sindh Steel ko NCR raise karo. replacement aur credit dono",
+      "event_types": [
+        "quality_rejection",
+        "payment_event",
+        "vendor_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-05-05T09:00:00",
+      "timestamp_raw": "5/5/2026 9:00 AM",
+      "sender": "Farhan Malik",
+      "text": "NCR bhej diya. unhone accept kiya. replacement 2 din mein",
+      "event_types": [
+        "quality_rejection",
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-05-07T08:30:00",
+      "timestamp_raw": "5/7/2026 8:30 AM",
+      "sender": "Farhan Malik",
+      "text": "replacement material aa gaya. quality theek hai",
+      "event_types": [
+        "dispatch_confirmation"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-05-07T08:35:00",
+      "timestamp_raw": "5/7/2026 8:35 AM",
+      "sender": "Ahmed Raza",
+      "text": "production resume ✅",
+      "event_types": [
+        "production_status"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-02T09:00:00",
+      "timestamp_raw": "6/2/2026 9:00 AM",
+      "sender": "Zubair Khan",
+      "text": "order 5600 — client ne final payment rok li hai. keh rahe hain 2 punch list items close nahi hue",
+      "event_types": [
+        "payment_event",
+        "qc_inspection"
+      ],
+      "order_numbers": [
+        "5600"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-02T09:15:00",
+      "timestamp_raw": "6/2/2026 9:15 AM",
+      "sender": "Tariq Usman",
+      "text": "punch list items kya hain?",
+      "event_types": [
+        "qc_inspection"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-02T09:20:00",
+      "timestamp_raw": "6/2/2026 9:20 AM",
+      "sender": "Salman Butt",
+      "text": "[Document: punchlist_5600_final.pdf]",
+      "event_types": [
+        "document_attachment"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-02T09:45:00",
+      "timestamp_raw": "6/2/2026 9:45 AM",
+      "sender": "Zubair Khan",
+      "text": "dekha maine. dono items chote hain. 1 din ka kaam hai",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-02T10:00:00",
+      "timestamp_raw": "6/2/2026 10:00 AM",
+      "sender": "Tariq Usman",
+      "text": "aaj hi khatam karo. kal client ko confirm karo. payment atak rahi hai",
+      "event_types": [
+        "material_shortage",
+        "payment_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-03T10:00:00",
+      "timestamp_raw": "6/3/2026 10:00 AM",
+      "sender": "Zubair Khan",
+      "text": "punch list complete ✅ photos bhej diye client ko",
+      "event_types": [
+        "production_status",
+        "qc_inspection"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-03T11:30:00",
+      "timestamp_raw": "6/3/2026 11:30 AM",
+      "sender": "Salman Butt",
+      "text": "client ne confirm kiya. payment release ho rahi hai",
+      "event_types": [
+        "payment_event"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-03T11:32:00",
+      "timestamp_raw": "6/3/2026 11:32 AM",
+      "sender": "Tariq Usman",
+      "text": "👍",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-20T08:30:00",
+      "timestamp_raw": "6/20/2026 8:30 AM",
+      "sender": "Ahmed Raza",
+      "text": "order 5700 — naya order confirm hua. 80 ton structural steel. biggest order this year",
+      "event_types": [
+        "vendor_event"
+      ],
+      "order_numbers": [
+        "5700"
+      ],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-20T08:35:00",
+      "timestamp_raw": "6/20/2026 8:35 AM",
+      "sender": "Tariq Usman",
+      "text": "mashallah. drawings kab milenge?",
+      "event_types": [
+        "design_change"
+      ],
+      "order_numbers": [],
+      "classified": true,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-20T08:40:00",
+      "timestamp_raw": "6/20/2026 8:40 AM",
+      "sender": "Ahmed Raza",
+      "text": "is hafte mein client bhejega",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-20T08:45:00",
+      "timestamp_raw": "6/20/2026 8:45 AM",
+      "sender": "Zubair Khan",
+      "text": "capacity check karta hun. 2 orders pehle se chal rahe hain",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    },
+    {
+      "timestamp": "2026-06-20T09:00:00",
+      "timestamp_raw": "6/20/2026 9:00 AM",
+      "sender": "Tariq Usman",
+      "text": "phir bhi lena hai. overtime karenge agar zaroorat padi. aisa order nahi chodna",
+      "event_types": [
+        "unknown"
+      ],
+      "order_numbers": [],
+      "classified": false,
+      "source": "whatsapp_export"
+    }
+  ]
+}
