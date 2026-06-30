@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Occuralog — A syncretic library for unified operational intelligence</title>
+<meta name="description" content="Occuralog turns fragmented operational data — WhatsApp, Excel, ERP — into a unified, queryable event log. Built under Occuris AI. Early experimental development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-void: #0a0612;
+    --bg-deep: #130a24;
+    --bg-panel: #1a0f30;
+    --line: rgba(177,78,255,0.18);
+    --violet: #b14eff;
+    --violet-soft: #8b5cf6;
+    --cyan: #4ee6ff;
+    --amber: #ffb84d;
+    --text: #f1eaf9;
+    --muted: #a896c4;
+    --muted-dim: #6e5d8c;
+    --display: 'Bricolage Grotesque', sans-serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  *{margin:0; padding:0; box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background: var(--bg-void);
+    color: var(--text);
+    font-family: var(--body);
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background: var(--violet); color:#0a0612; }
+
+  a{ color: var(--cyan); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  a:focus-visible, button:focus-visible, input:focus-visible{
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+  }
+
+  /* ---------- canvas background ---------- */
+  #stars{
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+  }
+  .nebula{
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 15%, rgba(177,78,255,0.20), transparent 60%),
+      radial-gradient(ellipse 50% 45% at 85% 25%, rgba(78,230,255,0.10), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 50% 90%, rgba(139,92,246,0.16), transparent 65%);
+    animation: drift 30s ease-in-out infinite alternate;
+  }
+  @keyframes drift{
+    0%{ transform: scale(1) translate(0,0); }
+    100%{ transform: scale(1.08) translate(-1.5%, 1.5%); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .nebula{ animation: none; }
+  }
+
+  .wrap{ position:relative; z-index:1; }
+  section{ position:relative; max-width: 1080px; margin:0 auto; padding: 7rem 1.75rem; }
+  .eyebrow{
+    font-family: var(--mono); font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase;
+    color: var(--cyan); display:flex; align-items:center; gap:0.6em; margin-bottom:1.4rem;
+  }
+  .eyebrow::before{ content:'◆'; font-size:0.7em; color: var(--violet); }
+
+  h1,h2,h3{ font-family: var(--display); font-weight:700; letter-spacing:-0.01em; }
+
+  /* ---------- nav ---------- */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 1.1rem 1.75rem;
+    backdrop-filter: blur(14px);
+    background: rgba(10,6,18,0.55);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-mark{ font-family: var(--display); font-weight:700; font-size:1.05rem; color: var(--text); display:flex; align-items:center; gap:0.5em;}
+  .nav-mark .dot{ width:8px; height:8px; border-radius:50%; background: var(--violet); box-shadow: 0 0 12px var(--violet); }
+  .nav-links{ display:flex; gap:1.8rem; font-size:0.9rem; }
+  .nav-links a{ color: var(--muted); }
+  .nav-links a:hover{ color: var(--text); text-decoration:none; }
+  @media (max-width: 640px){ .nav-links{ display:none; } }
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height: 100vh; display:flex; flex-direction:column; justify-content:center;
+    padding-top: 6rem;
+  }
+  .hero-status{
+    font-family: var(--mono); font-size:0.78rem; color: var(--amber);
+    display:inline-flex; align-items:center; gap:0.6em; margin-bottom:2rem;
+    border: 1px solid rgba(255,184,77,0.3); padding: 0.45rem 0.9rem; border-radius:999px;
+    width:fit-content; background: rgba(255,184,77,0.06);
+  }
+  .hero-status .pulse{
+    width:6px; height:6px; border-radius:50%; background: var(--amber);
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse{ 0%,100%{ opacity:1; } 50%{ opacity:0.3; } }
+
+  h1.hero-title{
+    font-size: clamp(3rem, 9vw, 6.5rem);
+    line-height: 0.95;
+    background: linear-gradient(180deg, #ffffff 0%, #d9c4ff 55%, var(--violet-soft) 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+    margin-bottom: 1.5rem;
+  }
+  .hero-sub{
+    font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+    color: var(--muted); max-width: 640px; font-weight:400; margin-bottom:2.5rem;
+  }
+  .hero-sub strong{ color: var(--text); font-weight:600; }
+  .hero-ctas{ display:flex; gap:1rem; flex-wrap:wrap; margin-bottom: 4rem; }
+
+  .btn{
+    font-family: var(--body); font-weight:600; font-size:0.95rem;
+    padding: 0.85rem 1.6rem; border-radius:10px; cursor:pointer; border:1px solid transparent;
+    display:inline-flex; align-items:center; gap:0.5em; transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover{ transform: translateY(-2px); text-decoration:none; }
+  .btn-primary{ background: linear-gradient(135deg, var(--violet), #7c3aed); color:#fff; box-shadow: 0 8px 30px rgba(177,78,255,0.35);}
+  .btn-primary:hover{ box-shadow: 0 12px 36px rgba(177,78,255,0.5); }
+  .btn-ghost{ background: rgba(255,255,255,0.03); border-color: var(--line); color: var(--text); }
+  .btn-ghost:hover{ border-color: var(--violet); }
+
+  .hero-meta{
+    display:flex; gap: 2.5rem; flex-wrap:wrap;
+    font-family: var(--mono); font-size:0.82rem; color: var(--muted-dim);
+    border-top: 1px solid var(--line); padding-top: 1.6rem;
+  }
+  .hero-meta span b{ color: var(--text); display:block; font-family:var(--display); font-size:1.3rem; font-weight:700; }
+
+  /* ---------- problem ---------- */
+  .problem-story{
+    font-family: var(--display); font-weight:500; font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+    line-height:1.45; color: var(--text); max-width:780px; margin-bottom: 2.5rem;
+  }
+  .chain{
+    border-left: 2px solid var(--line);
+    padding-left: 1.6rem; margin: 2rem 0;
+    display:flex; flex-direction:column; gap:1.1rem;
+  }
+  .chain-step{ position:relative; color:var(--muted); font-size:0.98rem; }
+  .chain-step::before{
+    content:''; position:absolute; left:-1.85rem; top:0.4em; width:9px; height:9px;
+    border-radius:50%; background: var(--bg-void); border:2px solid var(--violet-soft);
+  }
+  .chain-result{
+    font-family: var(--mono); font-size:0.85rem; color: var(--amber); margin-top:0.5rem;
+  }
+  .problem-close{ color: var(--muted); max-width: 680px; font-size:1.05rem; }
+  .problem-close .punch{ color: var(--text); font-weight:600; }
+
+  /* ---------- what is ---------- */
+  .panel{
+    background: linear-gradient(180deg, rgba(177,78,255,0.06), rgba(255,255,255,0.01));
+    border: 1px solid var(--line); border-radius: 18px; padding: 2.4rem;
+  }
+  .code-block{
+    font-family: var(--mono); font-size:0.92rem; background: var(--bg-void);
+    border: 1px solid var(--line); border-radius:12px; padding: 1.6rem;
+    margin-top: 1.8rem; overflow-x:auto; line-height:1.8;
+  }
+  .code-block .kw{ color: var(--violet-soft); }
+  .code-block .fn{ color: var(--cyan); }
+  .code-block .str{ color: var(--amber); }
+  .code-block .cm{ color: var(--muted-dim); }
+
+  .two-col{ display:grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items:start; }
+  @media (max-width: 760px){ .two-col{ grid-template-columns:1fr; } }
+
+  /* ---------- architecture ---------- */
+  .layer-table{ width:100%; border-collapse:collapse; margin-top:1rem; }
+  .layer-table tr{ border-bottom: 1px solid var(--line); }
+  .layer-table tr:last-child{ border-bottom:none; }
+  .layer-table td{ padding: 1.3rem 0.5rem; vertical-align:top; font-size:0.95rem; }
+  .layer-table .l-name{ font-family:var(--mono); color:var(--cyan); font-size:0.85rem; white-space:nowrap; }
+  .layer-table .l-tech{ font-family:var(--display); font-weight:700; color:var(--text); white-space:nowrap; }
+  .layer-table .l-why{ color: var(--muted); }
+
+  .pipeline{
+    display:flex; flex-direction:column; gap:0; margin-top:2.5rem;
+    border: 1px solid var(--line); border-radius:14px; overflow:hidden;
+  }
+  .pipe-step{
+    display:flex; align-items:center; gap:1.2rem; padding:1.1rem 1.5rem;
+    border-bottom:1px solid var(--line); font-size:0.92rem;
+  }
+  .pipe-step:last-child{ border-bottom:none; }
+  .pipe-step:nth-child(odd){ background: rgba(177,78,255,0.04); }
+  .pipe-num{ font-family:var(--mono); color:var(--violet-soft); font-size:0.8rem; width:2.2rem; flex-shrink:0; }
+  .pipe-name{ font-weight:600; color:var(--text); width:130px; flex-shrink:0; }
+  .pipe-desc{ color:var(--muted); flex:1; }
+  .pipe-tech{ font-family:var(--mono); font-size:0.78rem; color:var(--amber); white-space:nowrap; }
+
+  /* ---------- status checklist ---------- */
+  .status-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:0.9rem; margin-top:1.5rem; }
+  @media (max-width:640px){ .status-grid{ grid-template-columns:1fr; } }
+  .status-item{
+    display:flex; align-items:center; gap:0.8rem; padding:0.9rem 1.1rem;
+    border:1px solid var(--line); border-radius:10px; font-size:0.9rem; color:var(--muted);
+  }
+  .status-item.done{ color: var(--text); border-color: rgba(177,78,255,0.35); }
+  .status-dot{ width:9px; height:9px; border-radius:50%; flex-shrink:0; background: var(--muted-dim); }
+  .status-item.done .status-dot{ background: var(--violet); box-shadow:0 0 10px var(--violet); }
+
+  /* ---------- vision ---------- */
+  .vision-arc{ display:flex; align-items:center; gap:1.2rem; margin: 2.2rem 0; flex-wrap:wrap; }
+  .vision-node{
+    font-family: var(--display); font-weight:700; font-size:1.15rem;
+    padding: 0.9rem 1.5rem; border-radius:12px; border:1px solid var(--line);
+  }
+  .vision-node.now{ background: rgba(177,78,255,0.12); border-color: var(--violet); color:var(--text); }
+  .vision-node.next{ color: var(--muted-dim); }
+  .vision-arrow{ color: var(--violet-soft); font-size:1.4rem; }
+
+  /* ---------- contribute ---------- */
+  .ask-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:1.2rem; margin: 2rem 0 2.5rem; }
+  @media (max-width:760px){ .ask-grid{ grid-template-columns:1fr; } }
+  .ask-card{
+    border:1px solid var(--line); border-radius:14px; padding:1.6rem;
+    background: rgba(255,255,255,0.015);
+  }
+  .ask-card .q-num{ font-family:var(--mono); color:var(--cyan); font-size:0.8rem; margin-bottom:0.7rem; display:block; }
+  .ask-card p{ color:var(--muted); font-size:0.92rem; }
+
+  /* ---------- contact / subscribe ---------- */
+  .contact-section{
+    background: linear-gradient(180deg, rgba(177,78,255,0.08), transparent);
+    border-top: 1px solid var(--line);
+  }
+  .contact-grid{ display:grid; grid-template-columns: 1.1fr 1fr; gap:3.5rem; align-items:start; }
+  @media (max-width:820px){ .contact-grid{ grid-template-columns:1fr; gap:2.5rem; } }
+
+  .contact-links{ display:flex; flex-direction:column; gap:0.9rem; margin-top:1.6rem; }
+  .contact-link{
+    display:flex; align-items:center; gap:0.9rem; padding:0.95rem 1.2rem;
+    border:1px solid var(--line); border-radius:12px; color:var(--text); font-size:0.95rem;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .contact-link:hover{ border-color: var(--violet); background: rgba(177,78,255,0.06); text-decoration:none; }
+  .contact-link .icon{ width:20px; height:20px; flex-shrink:0; color: var(--violet-soft); }
+
+  .subscribe-box{
+    border:1px solid var(--line); border-radius:16px; padding:2rem;
+    background: rgba(177,78,255,0.05);
+  }
+  .subscribe-box h3{ font-size:1.3rem; margin-bottom:0.5rem; }
+  .subscribe-box p{ color:var(--muted); font-size:0.92rem; margin-bottom:1.5rem; }
+  .sub-form{ display:flex; gap:0.6rem; flex-wrap:wrap; }
+  .sub-form input[type=email]{
+    flex:1; min-width:180px; padding: 0.85rem 1rem; border-radius:10px;
+    border:1px solid var(--line); background: var(--bg-void); color:var(--text);
+    font-family: var(--body); font-size:0.92rem;
+  }
+  .sub-form input[type=email]::placeholder{ color: var(--muted-dim); }
+  .sub-form input[type=email]:focus{ border-color: var(--violet); outline:none; }
+  .sub-note{ font-family:var(--mono); font-size:0.75rem; color:var(--muted-dim); margin-top:0.9rem; }
+  .sub-note a{ color: var(--muted-dim); text-decoration: underline; }
+
+  /* ---------- footer ---------- */
+  footer{
+    text-align:center; padding: 3rem 1.75rem 4rem; color: var(--muted-dim);
+    font-family: var(--mono); font-size:0.8rem; border-top:1px solid var(--line);
+  }
+  footer a{ color: var(--muted); }
+</style>
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+<div class="nebula"></div>
+
+<nav>
+  <div class="nav-mark"><span class="dot"></span> occuralog</div>
+  <div class="nav-links">
+    <a href="#problem">The Problem</a>
+    <a href="#what">What It Is</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#vision">Vision</a>
+    <a href="#contribute">Contribute</a>
+  </div>
+  <a href="#subscribe" class="btn btn-ghost" style="padding:0.6rem 1.2rem; font-size:0.85rem;">Subscribe</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-status"><span class="pulse"></span> EARLY EXPERIMENTAL DEVELOPMENT — BUILT IN PUBLIC</div>
+    <h1 class="hero-title">Occuralog</h1>
+    <p class="hero-sub">A syncretic library for unified operational intelligence — turning <strong>WhatsApp threads, Excel sheets, and broken ERP exports</strong> into one queryable event log. The research phase before it becomes a language.</p>
+    <div class="hero-ctas">
+      <a href="https://github.com/kashaffatimajaffrey-design/occuralog" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
+      <a href="#contribute" class="btn btn-ghost">How to Contribute</a>
+    </div>
+    <div class="hero-meta">
+      <span><b>4</b>languages, one library</span>
+      <span><b>v0.1</b>milestone in progress</span>
+      <span><b>MIT</b>licensed, open</span>
+    </div>
+  </section>
+
+  <!-- ================= PROBLEM ================= -->
+  <section id="problem">
+    <div class="eyebrow">The Problem</div>
+    <p class="problem-story">A mid-size steel fabrication company. Structural components were due Tuesday. It is Thursday. The client is calling.</p>
+
+    <div class="chain">
+      <div class="chain-step">Call the production floor supervisor.</div>
+      <div class="chain-step">Check a WhatsApp message from two days ago about a material shortage.</div>
+      <div class="chain-step">Open an Excel sheet to find which vendor supplies the raw steel.</div>
+      <div class="chain-step">Call that vendor.</div>
+      <div class="chain-step">Discover the vendor's truck broke down — and nobody told anyone.</div>
+    </div>
+    <div class="chain-result">→ That chain took four hours. The answer was a broken truck.</div>
+
+    <p class="problem-close" style="margin-top:2.2rem;">This happens every day across thousands of companies in Pakistan, India, Bangladesh, Egypt, and Nigeria — manufacturers, construction firms, logistics operators who digitised in the worst possible way: <span class="punch">Excel for inventory, WhatsApp for communication, paper for approvals.</span> Each tool is an island. Enterprise solved this with SAP twenty years ago. SAP costs millions and is completely inaccessible to this market. Occuralog starts here.</p>
+  </section>
+
+  <!-- ================= WHAT IS ================= -->
+  <section id="what">
+    <div class="eyebrow">What Is Occuralog</div>
+    <div class="two-col">
+      <div>
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem); margin-bottom:1.2rem;">A syncretic library — the right tool, for each layer of the problem.</h2>
+        <p style="color:var(--muted); font-size:1.02rem;">It ingests what's already happening — WhatsApp exports, Excel files, ERP API calls — structures it into a unified timestamped event log, and makes it queryable. So the question takes seconds, not hours. Everything underneath — concurrent ingestion, legacy parsing, anomaly detection, semantic search — stays invisible to the developer. The API stays clean regardless of how messy the input is.</p>
+      </div>
+      <div class="code-block">
+<span class="kw">from</span> occuralog <span class="kw">import</span> <span class="fn">EventStream</span>
+
+stream = <span class="fn">EventStream</span>(source=<span class="str">"whatsapp_export.txt"</span>)
+stream.<span class="fn">ingest</span>()
+stream.<span class="fn">query</span>(<span class="str">"why was order #4821 delayed"</span>)
+
+<span class="cm"># → structured answer, not a four-hour phone chain</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ARCHITECTURE ================= -->
+  <section id="architecture">
+    <div class="eyebrow">Architecture</div>
+    <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem); margin-bottom:0.5rem;">Syncretic by design.</h2>
+    <p style="color:var(--muted); max-width:640px;">Each layer uses the language built for that job.</p>
+
+    <div class="panel" style="margin-top:2rem;">
+      <table class="layer-table">
+        <tr>
+          <td class="l-name">EVENT INGESTION</td>
+          <td class="l-tech">Rust</td>
+          <td class="l-why">Concurrent, append-only, zero GC pauses — compiles to a small binary that runs on cheap hardware.</td>
+        </tr>
+        <tr>
+          <td class="l-name">LEGACY PARSING</td>
+          <td class="l-tech">C++ <span style="color:var(--muted-dim); font-weight:400;">via FFI</span></td>
+          <td class="l-why">Battle-tested libraries for malformed Excel, fixed-width ERP exports, broken EDI — called from Rust.</td>
+        </tr>
+        <tr>
+          <td class="l-name">ORCHESTRATION + ML</td>
+          <td class="l-tech">Python</td>
+          <td class="l-why">Anomaly detection, LLM extraction, scheduling, API exposure — the glue layer.</td>
+        </tr>
+        <tr>
+          <td class="l-name">STORAGE + SEARCH</td>
+          <td class="l-tech">Postgres + pgvector</td>
+          <td class="l-why">Structured event log and semantic search over unstructured notes, in one database.</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3 style="font-size:1.3rem; margin-top:3rem; margin-bottom:0.5rem;">The algorithm</h3>
+    <p style="color:var(--muted); max-width:600px; margin-bottom:0.5rem;">Doesn't change across domains. The extraction rules and schema do — a factory floor today, a hospital ward log tomorrow, a construction site RFI tracker next.</p>
+
+    <div class="pipeline">
+      <div class="pipe-step"><span class="pipe-num">01</span><span class="pipe-name">Ingestion</span><span class="pipe-desc">Concurrent intake, append-only write</span><span class="pipe-tech">Rust</span></div>
+      <div class="pipe-step"><span class="pipe-num">02</span><span class="pipe-name">Parsing</span><span class="pipe-desc">Normalise format, handle malformed data</span><span class="pipe-tech">C++ / FFI</span></div>
+      <div class="pipe-step"><span class="pipe-num">03</span><span class="pipe-name">Extraction</span><span class="pipe-desc">Unstructured text → structured JSON events</span><span class="pipe-tech">Python + LLM</span></div>
+      <div class="pipe-step"><span class="pipe-num">04</span><span class="pipe-name">Storage</span><span class="pipe-desc">Timestamped event log + semantic index</span><span class="pipe-tech">Postgres + pgvector</span></div>
+      <div class="pipe-step"><span class="pipe-num">05</span><span class="pipe-name">Detection</span><span class="pipe-desc">Anomaly and pattern recognition over the event stream</span><span class="pipe-tech">Python</span></div>
+      <div class="pipe-step"><span class="pipe-num">06</span><span class="pipe-name">Query</span><span class="pipe-desc">Natural language → structured answer</span><span class="pipe-tech">—</span></div>
+    </div>
+
+    <h3 style="font-size:1.3rem; margin-top:3rem; margin-bottom:0.8rem;">v0.1 extraction strategy</h3>
+    <p style="color:var(--muted); max-width:680px;">Start with rules: if a message contains <em style="color:var(--text);">delay, nahi aya, late, pending</em> — classify as a delay event. Captures roughly <strong style="color:var(--text);">60% of cases</strong> with zero ML overhead. Everything the rules miss, the LLM handles. Every run is tracked in MLflow so the rule layer and LLM layer improve independently over time.</p>
+
+    <h3 style="font-size:1.3rem; margin-top:3rem; margin-bottom:0.8rem;">Current status</h3>
+    <div class="status-grid">
+      <div class="status-item done"><span class="status-dot"></span>Core ingestion layer (Rust)</div>
+      <div class="status-item done"><span class="status-dot"></span>WhatsApp export parser (Python v0.1)</div>
+      <div class="status-item"><span class="status-dot"></span>Excel parser (C++ via FFI)</div>
+      <div class="status-item"><span class="status-dot"></span>PostgreSQL event store</div>
+      <div class="status-item"><span class="status-dot"></span>Extraction pipeline (rule-based + LLM fallback)</div>
+      <div class="status-item"><span class="status-dot"></span>Anomaly detection (statistical baseline)</div>
+      <div class="status-item"><span class="status-dot"></span>Natural language query interface</div>
+      <div class="status-item"><span class="status-dot"></span>MLflow experiment tracking</div>
+    </div>
+  </section>
+
+  <!-- ================= VISION ================= -->
+  <section id="vision">
+    <div class="eyebrow">Long-Term Vision</div>
+    <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem); margin-bottom:1.2rem;">A library today. A language eventually.</h2>
+    <div class="vision-arc">
+      <div class="vision-node now">Library<br><span style="font-family:var(--mono); font-weight:400; font-size:0.75rem; color:var(--muted);">— research phase, now</span></div>
+      <div class="vision-arrow">→</div>
+      <div class="vision-node next">Standalone Language<br><span style="font-family:var(--mono); font-weight:400; font-size:0.75rem;">— multi-year, ahead</span></div>
+    </div>
+    <p style="color:var(--muted); max-width:680px; font-size:1.02rem;">The long-term vision is a syncretic language — one that natively expresses the concepts this library currently stitches together across four languages. Designed for operational intelligence the way Julia was designed for scientific computing, or Rust for systems safety. That's a multi-year project. The library is where it starts — you need to know what you wish the language had, before you can design it. <strong style="color:var(--text);">Occuralog is the research phase.</strong></p>
+  </section>
+
+  <!-- ================= CONTRIBUTE ================= -->
+  <section id="contribute">
+    <div class="eyebrow">How To Contribute</div>
+    <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem); margin-bottom:1rem;">This needs real problems more than it needs code.</h2>
+    <p style="color:var(--muted); max-width:700px; margin-bottom:0.5rem;">If you work in manufacturing, construction, logistics, or supply chain — anywhere operational data is fragmented across WhatsApp, Excel, and paper — open an issue and describe:</p>
+
+    <div class="ask-grid">
+      <div class="ask-card"><span class="q-num">01</span><p>What your messiest data format actually looks like.</p></div>
+      <div class="ask-card"><span class="q-num">02</span><p>What question you wish you could answer in seconds.</p></div>
+      <div class="ask-card"><span class="q-num">03</span><p>What currently takes hours — or never gets answered at all.</p></div>
+    </div>
+    <p style="color:var(--muted); max-width:700px;">Real problems from real domains directly shape what gets built next. A parser for a format you've encountered, a domain-specific extraction schema, a use case to test against — every contribution is welcome.</p>
+    <a href="https://github.com/kashaffatimajaffrey-design/occuralog/issues" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:2rem;">Open an Issue →</a>
+  </section>
+
+  <!-- ================= CONTACT / SUBSCRIBE ================= -->
+  <section class="contact-section" id="subscribe">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow">Get In Touch</div>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem); margin-bottom:0.5rem;">Reach out directly.</h2>
+        <p style="color:var(--muted);">Have a real problem this should solve, a format it should parse, or just want to talk about syncretic systems and language design? I'd love to hear from you.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:kash.fatima7@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
+            kash.fatima7@gmail.com
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/kashaf-fatima-jaffri67" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9v12M10 13a4 4 0 0 1 8 0v8"/></svg>
+            Connect on LinkedIn
+          </a>
+          <a class="contact-link" href="https://github.com/kashaffatimajaffrey-design/occuralog" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            github.com/kashaffatimajaffrey-design/occuralog
+          </a>
+        </div>
+      </div>
+
+      <div class="subscribe-box">
+        <h3>Follow the build</h3>
+        <p>Research notes and updates — architecture decisions, experiments, what broke and why. No spam, just the work as it happens.</p>
+        <form action="https://buttondown.com/api/emails/embed-subscribe/kashaf" method="post" target="popupwindow" class="sub-form" onsubmit="window.open('https://buttondown.com/kashaf', 'popupwindow')">
+          <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="sub-note">Powered by <a href="https://buttondown.com/kashaf" target="_blank" rel="noopener">Buttondown</a> · browse past issues there too</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Occuralog — built under <a href="https://kashaffatimajaffrey-design.github.io/Portfolio/" target="_blank" rel="noopener">Occuris AI</a> · MIT Licensed · Author: <a href="https://www.linkedin.com/in/kashaf-fatima-jaffri67" target="_blank" rel="noopener">Kashaf Fatima</a></p>
+  </footer>
+
+</div>
+
+<script>
+  // Starfield canvas — ambient, lightweight, respects reduced motion
+  (function(){
+    const canvas = document.getElementById('stars');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ctx = canvas.getContext('2d');
+    let w, h, stars = [];
+
+    function resize(){
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight * (document.body.scrollHeight / window.innerHeight > 1 ? 1 : 1);
+      h = canvas.height = window.innerHeight;
+    }
+    function makeStars(){
+      const count = Math.floor((w * h) / 9000);
+      stars = Array.from({length: count}, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 1.3 + 0.2,
+        baseAlpha: Math.random() * 0.6 + 0.2,
+        speed: Math.random() * 0.4 + 0.05,
+        hue: Math.random() > 0.85 ? 'violet' : 'white'
+      }));
+    }
+    function draw(t){
+      ctx.clearRect(0,0,w,h);
+      for(const s of stars){
+        const tw = reduceMotion ? s.baseAlpha : s.baseAlpha + Math.sin(t/1000 * s.speed + s.x) * 0.25;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+        ctx.fillStyle = s.hue === 'violet'
+          ? `rgba(177,78,255,${Math.max(tw,0.1)})`
+          : `rgba(241,234,249,${Math.max(tw,0.1)})`;
+        ctx.fill();
+      }
+      if(!reduceMotion) requestAnimationFrame(draw);
+    }
+    resize();
+    makeStars();
+    window.addEventListener('resize', () => { resize(); makeStars(); });
+    requestAnimationFrame(draw);
+  })();
+</script>
+
+</body>
+</html>
